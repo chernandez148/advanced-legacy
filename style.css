@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'TheSeasons';
-    src: url('/fonts/The_Seasons.otf') format('opentype');
+    src: url('fonts/The_Seasons.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -219,16 +219,19 @@ footer {
 
 footer .copyright {
     text-align: center;
-    padding: 1rem;
+    padding: 5rem 1rem 1rem 1rem;
     font-size: 24px;
 }
 
 .footer-wrapper {
     display: flex;
+    flex-wrap: wrap;
     width: 1600px;
     margin: 0 auto;
     padding: 5rem;
+    padding-bottom: 0;
     justify-content: space-between;
+    transition: all 1s ease-in-out;
 }
 
 .footer-wrapper h2 {
@@ -243,6 +246,7 @@ footer .copyright {
 .footer-wrapper p {
     text-align: center;
     font-size: 18px;
+    width: 100%;
 }
 
 .footer-wrapper img {

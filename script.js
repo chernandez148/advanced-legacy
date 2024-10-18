@@ -15,21 +15,35 @@ document.addEventListener("DOMContentLoaded", function() {
     const whatWeDoRight = document.querySelector('.what-we-do-right');
 
     const portfolio = document.querySelector('.portfolio');
-    const portfolioTop = document.querySelector('.top'); // Assuming you meant the left section
-    const portfolioMiddle = document.querySelector('.middle'); // Assuming you meant the right section
+    const portfolioTop = document.querySelector('.top'); 
+    const portfolioMiddle = document.querySelector('.middle'); 
 
-    // Function to handle visibility
+    const footer = document.querySelector('footer'); 
+    const footerWrapper = document.querySelector('.footer-wrapper'); 
+
+    // Function to handle visibility for elements that slide in from left/right
     const handleVisibility = (entry, selectorLeft, selectorRight) => {
         if (entry.isIntersecting) {
-            selectorLeft.style.left = "0"; // Show the left element
+            selectorLeft.style.left = "0"; 
             selectorLeft.style.opacity = 1;
-            selectorRight.style.right = "0"; // Show the right element
+            selectorRight.style.right = "0"; 
             selectorRight.style.opacity = 1;
+            observer.unobserve(entry.target); // Stop observing this element
         } else {
             selectorLeft.style.left = "-200px"; // Hide the left element
             selectorLeft.style.opacity = 0;
             selectorRight.style.right = "-200px"; // Hide the right element
             selectorRight.style.opacity = 0;
+        }
+    };
+
+    // Function to handle footer visibility (fade in/out)
+    const handleFooterVisibility = (entry, footerWrapper) => {
+        if (entry.isIntersecting) {
+            footerWrapper.style.opacity = 1;
+            observer.unobserve(entry.target); // Stop observing the footer
+        } else {
+            footerWrapper.style.opacity = 0;
         }
     };
 
@@ -45,13 +59,15 @@ document.addEventListener("DOMContentLoaded", function() {
         entries.forEach(entry => {
             // Check visibility for each element
             if (entry.target === info) {
-                handleVisibility(entry, infoLeft, infoRight); // Handle info visibility
+                handleVisibility(entry, infoLeft, infoRight); 
             } else if (entry.target === about) {
-                handleVisibility(entry, aboutLeft, aboutRight); // Handle about visibility
+                handleVisibility(entry, aboutLeft, aboutRight); 
             } else if (entry.target === whatWeDo) {
-                handleVisibility(entry, whatWeDoLeft, whatWeDoRight); // Handle what we do visibility
+                handleVisibility(entry, whatWeDoLeft, whatWeDoRight); 
             } else if (entry.target === portfolio) {
-                handleVisibility(entry, portfolioTop, portfolioMiddle); // Handle portfolio visibility
+                handleVisibility(entry, portfolioTop, portfolioMiddle); 
+            } else if (entry.target === footer) {
+                handleFooterVisibility(entry, footerWrapper); // Handle footer visibility separately
             }
         });
     }, options);
@@ -61,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
     observer.observe(about);
     observer.observe(whatWeDo);
     observer.observe(portfolio);
+    observer.observe(footer);
 
     // Optional: Add a timeout to delay the animation slightly after page load
     setTimeout(() => {
