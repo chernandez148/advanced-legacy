@@ -128,6 +128,11 @@ h1 {
     font-weight: 100;
 }
 
+.info h1,
+.what-we-do h1 {
+    color: #032b22 !important;
+}
+
 .info p,
 .about p,
 .what-we-do p,
