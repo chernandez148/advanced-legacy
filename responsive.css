@@ -1,0 +1,174 @@
+@media(max-width: 1650px) {
+    .footer-wrapper {
+        width: 100%;
+        padding: 5rem 2rem;
+    }
+}
+
+@media(max-width: 1250px) {
+
+    .portfolio {
+        padding-bottom: 0;
+    }
+
+    .portfolio-wrapper .middle {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .middle div {
+        padding: 0;
+    }
+
+    .middle p {
+        margin-bottom: 5rem;
+    }
+
+    .middle img {
+        height: 600px
+    }
+}
+
+
+@media(max-width: 1050px) {
+
+    .info .info-wrapper,
+    .about .about-wrapper,
+    .what-we-do .what-we-do-wrapper {
+        flex-direction: column;
+    }
+
+    .info-wrapper .info-left,
+    .info-wrapper .info-right,
+    .about-wrapper .about-left,
+    .about-wrapper .about-right,
+    .what-we-do-wrapper .what-we-do-left,
+    .what-we-do-wrapper .what-we-do-right {
+        width: 100%;
+    }
+}
+
+@media(max-width: 800px) {
+
+    .title-container img {
+        width: 200px;
+    }
+
+    .title-container h1 {
+        font-size: 110px;
+    }
+
+    .title-container h2 {
+        font-size: 35px;
+    }
+
+    .title-container h3 {
+        font-size: 30px;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-wrapper img {
+        margin-top: 3rem;
+    }
+
+}
+
+@media(max-width: 550px) {
+    .top h1 {
+        font-size: 54px;
+    }
+}
+
+@media(max-width: 600px) {
+    .title-container h1 {
+        font-size: 80px;
+    }
+
+    .title-container h2 {
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 550px) {
+    .top h1 {
+        font-size: 54px;
+    }
+}
+
+@media(max-width: 450px) {
+
+    .title-container img {
+        width: 125px;
+    }
+
+    .title-container h1 {
+        font-size: 60px;
+    }
+
+    .title-container h2 {
+        font-size: 18px;
+    }
+
+    .title-container h3 {
+        font-size: 20px;
+    }
+
+    .info h1,
+    .about h1,
+    .what-we-do h1,
+    .portfolio h1 {
+        font-size: 28px;
+    }
+
+    .info p,
+    .about p,
+    .what-we-do p,
+    .portfolio p {
+        font-size: 18px;
+    }
+
+    .middle img {
+        height: 400px;
+    }
+
+    .middle h2 {
+        text-align: center;
+        font-size: 26px;
+    }
+
+}
+
+@media(max-width: 400px) {
+
+    .info-wrapper .info-left,
+    .info-wrapper .info-right,
+    .about-wrapper .about-left,
+    .about-wrapper .about-right,
+    .what-we-do-wrapper .what-we-do-left,
+    .what-we-do-wrapper .what-we-do-right,
+    .portfolio-wrapper .top,
+    .portfolio-wrapper .middle {
+        padding: 2rem;
+
+    }
+
+    .footer-wrapper h2 {
+        font-size: 26px;
+    }
+
+    .footer-wrapper p {
+        font-size: 16px;
+    }
+
+    .footer-wrapper img {
+        width: 100px;
+    }
+
+    footer .copyright {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@font-face {
+    font-family: 'TheSeasons';
+    src: url('/fonts/The_Seasons.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cormorant Garamond", serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'TheSeasons';
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.hero video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.title-container {
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+
+.title-container.visible {
+    opacity: 1;
+}
+
+.title-container img {
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.title-container h1 {
+    font-size: 140px;
+    font-weight: 100;
+    margin-top: 50px;
+}
+
+.title-container h2 {
+    font-size: 45px;
+    font-weight: 100;
+}
+
+.title-container h3 {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.title-container p {
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.info .info-wrapper,
+.about .about-wrapper,
+.what-we-do .what-we-do-wrapper,
+.portfolio .portfolio-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.portfolio .portfolio-wrapper {
+    width: 1800px;
+    flex-direction: column;
+}
+
+.info,
+.about,
+.what-we-do,
+.portfolio {
+    display: flex;
+    padding: 5rem 0;
+    overflow-x: hidden;
+}
+
+.info h1,
+.about h1,
+.what-we-do h1,
+.portfolio h1 {
+    font-size: 50px;
+    font-weight: 100;
+}
+
+.info p,
+.about p,
+.what-we-do p,
+.portfolio p {
+    margin-top: 25px;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.info h1,
+.info p,
+.what-we-do h1,
+.what-we-do p {
+    color: black;
+}
+
+.info-wrapper .info-left,
+.info-wrapper .info-right,
+.about-wrapper .about-left,
+.about-wrapper .about-right,
+.what-we-do-wrapper .what-we-do-left,
+.what-we-do-wrapper .what-we-do-right {
+    width: 50%;
+    padding: 3rem;
+    position: relative;
+    transition: all 1s ease-in-out;
+}
+
+.portfolio-wrapper .top,
+.portfolio-wrapper .middle {
+    width: 100%;
+    padding: 3rem;
+    position: relative;
+    transition: all 1s ease-in-out;
+}
+
+.portfolio-wrapper .middle {
+    display: flex;
+}
+
+.top h1 {
+    font-size: 72px;
+}
+
+.middle h2 {
+    font-size: 35px;
+    margin-top: 2.5rem;
+    font-weight: 100;
+    font-family: 'TheSeasons';
+}
+
+.middle p {
+    font-size: 22px;
+}
+
+.middle img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.middle div {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about,
+.portfolio {
+    background-color: #00634d;
+}
+
+.info h1,
+.info p,
+.portfolio h1,
+.portfolio p {
+    text-align: center;
+}
+
+.about img {
+    object-fit: cover;
+}
+
+footer {
+    background-color: #032b22;
+}
+
+footer .copyright {
+    text-align: center;
+    padding: 1rem;
+    font-size: 24px;
+}
+
+.footer-wrapper {
+    display: flex;
+    width: 1600px;
+    margin: 0 auto;
+    padding: 5rem;
+    justify-content: space-between;
+}
+
+.footer-wrapper h2 {
+    font-size: 35px;
+    margin-top: 2.5rem;
+    font-weight: 100;
+    font-family: 'TheSeasons';
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.footer-wrapper p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.footer-wrapper img {
+    object-fit: contain;
+}
