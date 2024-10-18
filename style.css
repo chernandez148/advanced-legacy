@@ -100,7 +100,7 @@ h1 {
 .about .about-wrapper,
 .what-we-do .what-we-do-wrapper,
 .portfolio .portfolio-wrapper {
-    width: 1200px;
+    width: 1800px;
     margin: 0 auto;
     display: flex;
     align-items: center;
