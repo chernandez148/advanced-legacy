@@ -171,6 +171,7 @@ h1 {
 
 .portfolio-wrapper .middle {
     display: flex;
+    align-items: flex-start;
 }
 
 .top h1 {
